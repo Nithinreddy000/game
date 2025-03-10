@@ -127,7 +127,7 @@ class TriviaGame {
             this.gameScreen.classList.remove('hidden');
 
             const level = gameData.levels[levelIndex];
-            document.getElementById('question-text').textContent = level.question;
+            document.getElementById('question-text').innerHTML = level.question;
 
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
