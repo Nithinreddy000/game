@@ -233,7 +233,7 @@ class TriviaGame {
             this.sounds.correct.currentTime = 0;
             this.sounds.correct.play().catch(e => console.log("Audio play failed:", e));
             
-            this.score += 100;
+            this.score += 100; // Award exactly 100 points for correct answer
             this.scoreElement.textContent = this.score;
             
             // Mark the current level as completed
@@ -243,6 +243,7 @@ class TriviaGame {
         } else if (this.sounds.wrong) {
             this.sounds.wrong.currentTime = 0;
             this.sounds.wrong.play().catch(e => console.log("Audio play failed:", e));
+            // No points for wrong answers
         }
 
         this.showCompletionModal(isCorrect, selectedIndex);
@@ -310,8 +311,8 @@ class TriviaGame {
             case 'fact':
                 // Show reward animation and update score
                 this.feedbackState = 'reward';
-                this.score += 100;
-                this.scoreElement.textContent = this.score;
+                // Removed the additional 100 points here to ensure exactly 100 points per correct answer
+                this.scoreElement.textContent = this.score; // Update score display
                 
                 // Mark level as completed and update UI
                 this.completedLevels.add(this.currentLevel);

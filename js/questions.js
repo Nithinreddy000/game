@@ -4,7 +4,7 @@ const gameData = {
     levels: [
         {
             type: 'college_trivia',
-            question: 'What tech term does this emoji combination represent? 📊 + 🏠',
+            question: 'What tech term does this emoji combination represent? <span style="font-size: 24px;">📊</span> + <span style="font-size: 24px;">🏠</span>',
             options: [
                 'Data Storage',
                 'Database',
@@ -73,7 +73,7 @@ const gameData = {
         },
         {
             type: 'riddle',
-            question: 'I have keys but open no locks. I have space but no room. You can enter, but you can’t leave. What am I?',
+            question: 'I have keys but open no locks. I have space but no room. You can enter, but you cant leave. What am I?',
             options: [
                 'KeyBoard',
                 'Piano',
@@ -81,7 +81,7 @@ const gameData = {
                 'Cloud'
             ],
             correct: 0,
-            question2: 'What has keys but can’t open locks?',
+            question2: 'What has keys but cant open locks?',
             options2: [
                 'Piano',
                 'Map',
